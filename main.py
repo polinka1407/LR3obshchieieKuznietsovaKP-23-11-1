@@ -384,7 +384,7 @@ for i in range(n):
     if token_reuse[i] == 1:
         risk += 2
     risk_level.append(risk)
-    if risk >= 4: #Изменения2. Пороговое значение риска изменено с 3 на 4 
+    if risk >= 3: #Изменения2. Пороговое значение риска изменено с 4 на 3 
         decision.append("BLOCK")
     else:
         decision.append("ALLOW")
