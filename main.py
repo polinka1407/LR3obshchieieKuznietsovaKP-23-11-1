@@ -209,9 +209,9 @@
 
 #ЛР_3
 #Общее задание
-import os 
-my_secret=os.environ['MY_SECRET']
-print(my_secret)
+# import os 
+# my_secret=os.environ['MY_SECRET']
+# print(my_secret)
 
 
 
@@ -227,6 +227,9 @@ print(my_secret)
 import os 
 my_secret=os.environ['SEC_Kuznetsova_3']
 print(my_secret)
+
+
+
 
 #Задание_2_берем код из индивидуальной части лр_2
 #вариант 2 
@@ -319,6 +322,9 @@ plt.figure()
 #(что это значит?)
 # На вопросы Малахова Д.С. ответила верно, 5/5. 
 
+# 5 задание с SHell
+# 6 задание. Подвязан аккаунт на гитхаб и подгружены файлы в репозиторий. 
+# 7 задание. Внесены изменения  # изменение1  C_ost 50000 на 70000 
 
 
 #ИНДИВИДУАЛЬНАЯ ЧАСТЬ ЛР_3
@@ -378,7 +384,7 @@ for i in range(n):
     if token_reuse[i] == 1:
         risk += 2
     risk_level.append(risk)
-    if risk >= 3:
+    if risk >= 4: #Изменения2. Пороговое значение риска изменено с 3 на 4 
         decision.append("BLOCK")
     else:
         decision.append("ALLOW")
@@ -484,3 +490,18 @@ plt.close()
 # print(" - chart_pie.png (круговая диаграмма решений)")
 # print(" - chart_risk_bars.png (гистограмма риска)")
 # print(" - risk_factors_sum.png (факторы риска)")
+
+#Задание 1. Секреты 
+import os
+from getpass import getpass
+
+SECRET_LOGIN = os.environ['SECRET_LOGIN']
+SECRET_PASSWORD = os.environ['SECRET_PASSWORD']
+
+user_login = input("Введите логин: ")
+user_password = input("Введите пароль: ")  # пароль не отображается при вводе
+
+if user_login == SECRET_LOGIN and user_password == SECRET_PASSWORD:
+    print("\n Доступ разрешён!")
+else:
+    print("\n Доступ запрещён!")
