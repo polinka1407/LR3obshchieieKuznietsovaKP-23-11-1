@@ -209,9 +209,9 @@
 
 #ЛР_3
 #Общее задание
-# import os 
-# my_secret=os.environ['MY_SECRET']
-# print(my_secret)
+import os 
+my_secret=os.environ['MY_SECRET']
+print(my_secret)
 
 
 
@@ -233,7 +233,7 @@ print(my_secret)
 #линейный способ
 from sympy import *
 k, T, C, L = symbols('k T C L')
-C_ost = 50000
+C_ost = 70000 # изменение1 50000 на 70000 
 Am_lst =[]
 C_ost_lst=[]
 for i in range(9):
@@ -271,17 +271,17 @@ print(tfame2)
 #визуализация
 
 import numpy as np
-import matplotlib.pyplot as plt #что это значит?
+import matplotlib.pyplot as plt #что это значит? Ответ: это стандартный способ подключить инструменты для рисования графиков в Python. 
 plt.plot(tfame['Y'], tfame['C_ost_lst'], label='Am')
 plt.savefig('chart7.png')
 plt.figure()
 plt.plot(tfame2['Y'], tfame2['C_ost_lst_2'], label='Am2')
-plt.savefig('chart8.png') # что это значит?
+plt.savefig('chart8.png') # что это значит? Ответ: это команда для сохранения текущего графика в файл с именем 'chart8.png'. 
 plt.figure()
 
 plt.figure()
 vals = Am_lst
-labels = [str(x) for x in range(1,10)] # что это значит?
+labels = [str(x) for x in range(1,10)] # что это значит? Ответ:  это генератор списка, который создает список строковых представлений чисел от 1 до 9. 
 explode = (0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1)
 fig, ax = plt.subplots()
 ax.pie(vals, labels=labels, autopct='%1.1f%%', shadow=True, explode=explode, wedgeprops={'lw':1, 'ls':'--', 'edgecolor':"k"}, rotatelabels=True)
@@ -315,14 +315,15 @@ plt.figure()
 
 # Проверил: Икрамов. Все верно.
 
-#Задание 4 выполняла с Малаховой 
+#Задание 4 выполняла с Малаховой Дарьей.
 #(что это значит?)
+# На вопросы Малахова Д.С. ответила верно, 5/5. 
 
 
 
-#ИНДИВИДУАЛЬНАЯ ЧАСТЬ
+#ИНДИВИДУАЛЬНАЯ ЧАСТЬ ЛР_3
 
-#КОНТЕЙНЕР РАСЧЁТА (микросервис защиты от НСД через сторонние сервисы)
+#КОНТЕЙНЕР РАСЧЁТА (микросервис защиты от несанкционированного доступа через сторонние сервисы)
 
 import random
 import pandas as pd
